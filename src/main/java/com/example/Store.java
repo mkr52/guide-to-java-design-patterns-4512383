@@ -9,6 +9,7 @@ public class Store {
         buySnack("ChocolateBar");
         buySnack("Chips");
         buySnack("Drink");
+        // buySnack("Drinks");
     }
 
     private static void buySnack(String snackType) {
