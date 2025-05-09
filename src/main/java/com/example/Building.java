@@ -26,4 +26,10 @@ public class Building extends Graphic {
                 '}';
     }
 
+    @Override
+    public Building clone() {
+        return new Building(getHeightInPixels(), new BuildingType(getBuildingType()
+        .getType()));
+    }
+
 }

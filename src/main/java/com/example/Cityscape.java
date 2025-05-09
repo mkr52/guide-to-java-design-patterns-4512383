@@ -8,10 +8,10 @@ public class Cityscape {
 
         BuildingType houseBuildingType = new BuildingType("House");
         Building house1 = new Building(21, houseBuildingType);
-        Building house2 = new Building(21, houseBuildingType);
-        Building house3 = new Building(21, houseBuildingType);
-        Building house4 = new Building(21, houseBuildingType);
-        Building house5 = new Building(21, houseBuildingType);
+        Building house2 = house1.clone();
+        Building house3 = house1.clone();
+        Building house4 = house1.clone();
+        Building house5 = house1.clone();
         houseBuildingType.setType("House with yard");
 
 
