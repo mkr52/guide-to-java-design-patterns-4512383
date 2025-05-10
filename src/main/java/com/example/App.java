@@ -6,6 +6,10 @@ public class App {
         var pdfDocumentUploader = new PdfDocumentUploader();
         var onlineApplication = new OnlineApplication(pdfDocumentUploader);
         onlineApplication.uploadDocument();
+
+        var wordDocumentUploader = new WordDocumentAdapter();
+        var onlineApplication2 = new OnlineApplication(wordDocumentUploader);
+        onlineApplication2.uploadDocument();
     }
 
 }
