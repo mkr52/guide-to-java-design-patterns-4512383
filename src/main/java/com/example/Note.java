@@ -1,6 +1,6 @@
 package com.example;
 
-public class Note {
+public class Note implements Playable{
 
     private final char value;
 
@@ -10,6 +10,11 @@ public class Note {
 
     public void play() {
         System.out.println(value);
+    }
+
+    @Override
+    public void isPlayable() {
+        System.out.println("Note has value: " + value);
     }
 
 }
