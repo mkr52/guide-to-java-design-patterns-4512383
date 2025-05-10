@@ -2,7 +2,6 @@ package com.example;
 
 public class App {
 
-
     public static void main(String[] args) {
         UserInterface roadUserInterface = createUserInterface("RED");
         UserInterface mountainUserInterface = createUserInterface("BLUE");
@@ -12,17 +11,19 @@ public class App {
 
     }
 
-
     private static UserInterface createUserInterface(String color) {
-        if (color.equalsIgnoreCase("RED")) {
-            return new UserInterface(new RedButton(), new RedScrollBar());
-        } else if (color.equalsIgnoreCase("BLUE")) {
-            return new UserInterface(new BlueButton(), new BlueScrollBar());
-        } else {
-            throw new IllegalArgumentException("Color not supported");
-        }
+        var factoryType = FactorMaker.createUIFactory(color);
+        var button = factoryType.createButton();
+        var scroll = factoryType.createScrollBar();
+        return new UserInterface(button, scroll);
+        // if (color.equalsIgnoreCase("RED")) {
+        // return new UserInterface(new RedButton(), new RedScrollBar());
+        // } else if (color.equalsIgnoreCase("BLUE")) {
+        // return new UserInterface(new BlueButton(), new BlueScrollBar());
+        // } else {
+        // throw new IllegalArgumentException("Color not supported");
+        // }
 
     }
 
 }
-
